@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reservation</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      font-family: Arial;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+    .card {
+      background: white;
+      color: black;
+      padding: 30px;
+      border-radius: 15px;
+      width: 300px;
+      text-align: center;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+    button {
+      background: #243b55;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #141e30;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Book Ticket</h2>
+
+  <form onsubmit="bookTicket(); return false;">
+    <input type="text" placeholder="Passenger Name" required>
+    <input type="text" placeholder="Train Number" required>
+    <input type="text" placeholder="From" required>
+    <input type="text" placeholder="To" required>
+    <input type="date" required>
+
+    <button type="submit">BOOK NOW</button>
+    <button type="button" onclick="cancelTicket()">CANCEL</button>
+  </form>
+</div>
+
+<script>
+  function bookTicket() {
+    alert("Reservation Successful!");
+    window.location.href = "confirmation.html";
+  }
+
+  function cancelTicket() {
+    
+	window.location.href = "cancel.html";
+  }
+</script>
+
+</body>
+</html>
